@@ -1,0 +1,10 @@
+# Login definitions (demo data)
+MAIL_DIR        /var/mail
+PASS_MAX_DAYS   90
+PASS_MIN_DAYS   1
+PASS_WARN_AGE   14
+UID_MIN         1000
+UID_MAX         60000
+GID_MIN         1000
+GID_MAX         60000
+UMASK           027

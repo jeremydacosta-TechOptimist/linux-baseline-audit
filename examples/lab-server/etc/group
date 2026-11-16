@@ -1,0 +1,8 @@
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+sudo:x:27:labadmin
+sshd:x:105:
+labadmin:x:1000:
+baduser:x:1001:

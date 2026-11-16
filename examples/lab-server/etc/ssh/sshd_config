@@ -1,0 +1,14 @@
+# Lab server SSH daemon configuration (demo data, deliberately not fully hardened)
+Port 22
+Protocol 2
+PermitRootLogin yes
+PasswordAuthentication no
+PermitEmptyPasswords no
+MaxAuthTries 3
+X11Forwarding no
+LoginGraceTime 60
+Banner /etc/issue.net
+ClientAliveInterval 300
+ClientAliveCountMax 3
+UsePAM yes
+Include /etc/ssh/sshd_config.d/*.conf
