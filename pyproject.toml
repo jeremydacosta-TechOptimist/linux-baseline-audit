@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linux-baseline-audit"
+version = "1.0.0"
+description = "CIS-aligned Linux server baseline auditor: SSH, accounts, permissions, sysctl, services, firewall and patch checks with JSON, Markdown and HTML reports."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Jeremy da Costa", email = "357285436+jeremydacosta-TechOptimist@users.noreply.github.com" },
+]
+keywords = [
+  "linux",
+  "hardening",
+  "security-audit",
+  "cis-benchmark",
+  "sysadmin",
+  "compliance",
+  "configuration-audit",
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Environment :: Console",
+  "Topic :: System :: Systems Administration",
+  "Topic :: Security",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+baseaudit = "baseaudit.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/jeremydacosta-TechOptimist/linux-baseline-audit"
+Issues = "https://github.com/jeremydacosta-TechOptimist/linux-baseline-audit/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
